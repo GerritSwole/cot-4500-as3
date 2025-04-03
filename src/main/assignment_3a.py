@@ -13,7 +13,7 @@ def EulerMethod(f, a, b, f0, n):
 def f(t,y):
     return t - y**2
 
-EulerMethod(f,1,4,1,5)
+EulerMethod(f,0,2,1,10)
 
 
 ## Question 2 Runge-Kutta Method
@@ -35,5 +35,5 @@ def RungeKuttaMethod(f, a, b, f0, n):
 def f(t,y):
     return t - y**2
 
-RungeKuttaMethod(f,1,4,1,5)
+RungeKuttaMethod(f,0,2,1,10)
     
