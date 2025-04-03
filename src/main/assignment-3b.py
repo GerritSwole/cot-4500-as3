@@ -2,9 +2,12 @@ import numpy as np
 
 # Q1: Gaussian Elimination
 # Define the augmented matrix
-# Create a random 3x4 matrix with integer values between 1 and 9
-np.random.seed(0)  # Set seed for reproducibility
-A = np.random.randint(1, 10, size=(3, 4)).astype(float)
+A = np.array([
+    [2, -1, 1, 6],
+    [1, 3, 1, 0],
+    [-1, 5, 4, -3]
+], dtype=float)
+
 def gaussian_elimination_solve(augmented_matrix):
     # Perform Gaussian elimination
     n = augmented_matrix.shape[0]
@@ -30,8 +33,12 @@ print(solution)
 
 # Q2: LU Factorization and Determinant Calculation
 # Define the matrix
-np.random.seed(1)  # Set seed for reproducibility
-B = np.random.randint(1, 10, size=(4, 4)).astype(float)
+B = np.array([
+    [1, 1, 0, 3],
+    [2, 1, -1, 1],
+    [3, -1, -1, 2],
+    [-1, 2, 3, -1]
+], dtype=float)
 
 # Perform LU factorization
 n = B.shape[0]
@@ -61,8 +68,13 @@ print(U)
 
 # Q3: Check Diagonal Dominance
 # Define the matrix
-np.random.seed(2)  # Set seed for reproducibility
-C = np.random.randint(1, 10, size=(5, 5)).astype(float)
+C = np.array([
+    [9, 0, 5, 2, 1],
+    [3, 9, 1, 2, 1],
+    [0, 1, 7, 2, 3],
+    [4, 2, 3, 12, 2],
+    [3, 2, 4, 0, 8]
+], dtype=float)
 
 def is_diagonally_dominant(matrix):
     n = matrix.shape[0]
@@ -81,8 +93,11 @@ print("\nDiagonally dominant:" if diagonally_dominant else "\nNot diagonally dom
 
 # Q4: Check Positive Definiteness
 # Define the matrix
-np.random.seed(0)  # Set seed for reproducibility
-D = np.random.randint(1, 10, size=(3, 3)).astype(float)
+D = np.array([
+    [2, 2, 1],
+    [2, 3, 0],
+    [1, 0, 2]
+], dtype=float)
 
 # Function to check if the matrix is positive definite
 def is_pd(matrix):
